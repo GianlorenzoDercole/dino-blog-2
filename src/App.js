@@ -1,3 +1,48 @@
+// // DINO  STATE NO FORM
+
+// import logo from './logo.svg';
+// import './App.css';
+// import React, {Component} from 'react'
+// import Post from './Post.jsx'
+// class App extends Component {
+//   state = {
+//     title: 'dinos awesome',
+//     author: 'ste ste',
+//     body: 'check out property',
+//     comments: ['first', ' gp' , 'h t a']
+// }
+//   // create a function that changes the body of state
+//   changeBody = () => {
+//     console.log('click')
+//     const userInput = prompt('what shouls the current be')
+//     this.setState({body: userInput})
+//   }
+//   render(){
+//     const post = {
+//       title: 'dinos awesome',
+//       author: 'ste ste',
+//       body: 'check out property',
+//       comments: ['first', ' gp' , 'h t a']
+//     }
+
+//     return (
+//       <div className="App">
+//         <Post post={post} name='April' changeBody={this.changeBody} appState={this.state}/>
+
+
+//       </div>
+//     );
+//     }
+// }
+
+// export default App;
+
+
+
+
+
+
+
 // DINO
 
 import logo from './logo.svg';
@@ -9,7 +54,8 @@ class App extends Component {
     title: 'dinos awesome',
     author: 'ste ste',
     body: 'check out property',
-    comments: ['first', ' gp' , 'h t a']
+    comments: ['first', ' gp' , 'h t a'],
+    input: ''
 }
   // create a function that changes the body of state
   changeBody = () => {
@@ -29,12 +75,29 @@ class App extends Component {
       <div className="App">
         <Post post={post} name='April' changeBody={this.changeBody} appState={this.state}/>
 
+      <p>{this.state.input}</p>
+      <form>
+        <input
+          type='text'
+          onChange={e => {
+            // use the synthetic event to get the value data from the input
+            this.setState({input: e.target.value})
+          }}
+          // set value of input to be referenced in state
+          value={this.state.input}
+
+        />
+      </form>
       </div>
+
     );
     }
 }
 
 export default App;
+
+
+
 
 
 // STUDENT
