@@ -53,6 +53,31 @@
 
 // State in app
 
+// import React, {Component} from 'react'
+
+// import Comment from './Comment'
+// class Post extends Component {
+
+//     render() {
+//         return (
+//             <>
+//             <h1>{this.props.post.title}</h1>
+//             <p>{this.props.appState.body}</p>
+//             {this.props.post.comments.map(item => (
+//                 // <li>{item}</li>
+//                 <Comment message={item} />
+//             ))}
+//             <button onClick={this.props.changeBody}>click</button>
+//             </>
+//         )
+//     }
+// }
+
+// export default Post
+
+
+
+// WITH ARRAY IN APP.JS
 import React, {Component} from 'react'
 
 import Comment from './Comment'
@@ -62,7 +87,8 @@ class Post extends Component {
         return (
             <>
             <h1>{this.props.post.title}</h1>
-            <p>{this.props.appState.body}</p>
+            <p>{this.props.post.author}</p>
+            <p>{this.props.post.body}</p>
             {this.props.post.comments.map(item => (
                 // <li>{item}</li>
                 <Comment message={item} />
