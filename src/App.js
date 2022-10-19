@@ -193,20 +193,43 @@
 
 
 
-
-
 // CALC
+
+// import React, {Component} from 'react'
+
+// import Calc from './Calc.js'
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <>
+//         <Calc />
+//         <h1>Calculator</h1>
+//       </>
+//     )
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+// FRUIT FILTER
 
 import React, {Component} from 'react'
 
-import Calc from './Calc.js'
+import FruitContainer from './components/FruitContainer.jsx'
 
 export default class App extends Component {
   render() {
     return (
       <>
-        <Calc />
-        <h1>Calculator</h1>
+        <FruitContainer />
       </>
     )
   }
